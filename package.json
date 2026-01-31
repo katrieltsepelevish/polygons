@@ -1,0 +1,33 @@
+{
+    "name": "polygons",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev:web": "pnpm --filter \"web\" run dev",
+        "dev:api": "pnpm --filter \"api\" run dev",
+        "dev": "pnpm run --filter \"web\"  --filter \"api\" --parallel dev",
+        "test:web": "pnpm --filter \"web\" run test",
+        "test:api": "pnpm --filter \"api\" run test",
+        "test": "pnpm run --filter \"web\"  --filter \"api\" --parallel test",
+        "prettier": "prettier --write .",
+        "eslint": "pnpm run --filter \"web\" --filter \"api\" lint",
+        "format": "pnpm run prettier && pnpm run eslint"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm",
+    "dependencies": {
+        "tailwindcss": "^4.1.18"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "eslint": "^9.39.2",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^16.5.0",
+        "prettier": "^3.8.1",
+        "typescript-eslint": "^8.54.0"
+    }
+}
